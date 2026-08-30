@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Book of Ra",
+      "hasCanvas": false,
+      "bodyTextLen": 68,
+      "bodyTextHash": "f0b80e704ce1a1970567c7ca0ae43920cde6520fc0b26e5d72e1714f065e41d2",
+      "bodyTextPrefix": "DE 6 ROLLEN · 25 LINIEN Book of Ra BERÜHREN, UM DAS GRAB ZU BETR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Book of Ra",
+      "hasCanvas": false,
+      "bodyTextLen": 68,
+      "bodyTextHash": "f0b80e704ce1a1970567c7ca0ae43920cde6520fc0b26e5d72e1714f065e41d2",
+      "bodyTextPrefix": "DE 6 ROLLEN · 25 LINIEN Book of Ra BERÜHREN, UM DAS GRAB ZU BETR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
