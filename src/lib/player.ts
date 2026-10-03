@@ -8,6 +8,8 @@ import { getSql } from "@/lib/db";
 export const ADMIN_INBOX = "info@harmonai.ch";
 const ADMIN_DELIVER = ["thhaessig84@gmail.com", "info@harmonai.ch"] as const;
 const ADMIN_LOGINS = new Set(["info@harmonai.ch", "thhaessig84@gmail.com"]);
+/** Starter credits for newly registered players (CHF-equivalent units). */
+const STARTER_CREDITS = 50;
 
 type PlayerRow = {
   user_id: string;
@@ -155,14 +157,15 @@ export const registerPlayer = createServerFn({ method: "POST" })
     if (!row) {
       const token = randomBytes(24).toString("hex");
       const inserted = await sql<PlayerRow>`
-        insert into player (user_id, email, approve_token, approved, approved_at, mail_sent)
+        insert into player (user_id, email, approve_token, approved, approved_at, mail_sent, credits)
         values (
           ${context.userId},
           ${email},
           ${token},
           ${admin},
           ${admin ? new Date().toISOString() : null},
-          ${admin}
+          ${admin},
+          ${admin ? 1000 : STARTER_CREDITS}
         )
         returning user_id, email, approved, approve_token, mail_sent
       `;
